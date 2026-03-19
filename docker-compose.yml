@@ -1,0 +1,11 @@
+services:
+  resume-ml:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resume-ml-service
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
